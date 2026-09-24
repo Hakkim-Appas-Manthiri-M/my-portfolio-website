@@ -29,6 +29,7 @@ const transporter = nodemailer.createTransport({
 transporter.verify((error) => {
   if (error) {
     console.error("SMTP connection failed:", error.message);
+    console.log("Error", error);
   } else {
     console.log("SMTP server is ready.");
   }
@@ -669,6 +670,7 @@ All rights reserved.
     });
   } catch (error) {
     console.error("Contact email error:", error);
+    console.log("Error", error);
 
     return res.status(500).json({
       success: false,
