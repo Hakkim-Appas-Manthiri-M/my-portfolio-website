@@ -170,7 +170,7 @@
 
   color: #ffffff;
 
-  font-size: clamp(43px, 5vw, 67px);
+  font-size: clamp(43px, 4vw, 67px);
   font-weight: 900;
 
   line-height: 1;

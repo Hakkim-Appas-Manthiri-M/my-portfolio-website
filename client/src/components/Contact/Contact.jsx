@@ -10,10 +10,7 @@ import {
 
 import { useState } from "react";
 
-import {
-  GithubIcon,
-  LinkedinIcon,
-} from "../Icons/SocialIcons";
+import { GithubIcon, LinkedinIcon } from "../Icons/SocialIcons";
 
 import "./Contact.css";
 
@@ -30,8 +27,7 @@ function Contact() {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] =
-    useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -52,19 +48,9 @@ function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const {
-      name,
-      email,
-      subject,
-      message,
-    } = formData;
+    const { name, email, subject, message } = formData;
 
-    if (
-      !name.trim() ||
-      !email.trim() ||
-      !subject.trim() ||
-      !message.trim()
-    ) {
+    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
       setStatus({
         type: "error",
         message: "Please fill in all fields.",
@@ -73,14 +59,12 @@ function Contact() {
       return;
     }
 
-    const emailPattern =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(email.trim())) {
       setStatus({
         type: "error",
-        message:
-          "Please enter a valid email address.",
+        message: "Please enter a valid email address.",
       });
 
       return;
@@ -107,22 +91,18 @@ function Contact() {
             subject,
             message,
           }),
-        }
+        },
       );
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(
-          data.message ||
-            "Unable to send your message."
-        );
+        throw new Error(data.message || "Unable to send your message.");
       }
 
       setStatus({
         type: "success",
-        message:
-          "Message sent successfully! I'll get back to you soon.",
+        message: "Message sent successfully! I'll get back to you soon.",
       });
 
       setFormData({
@@ -132,16 +112,11 @@ function Contact() {
         message: "",
       });
     } catch (error) {
-      console.error(
-        "Contact form error:",
-        error
-      );
+      console.error("Contact form error:", error);
 
       setStatus({
         type: "error",
-        message:
-          error.message ||
-          "Something went wrong. Please try again.",
+        message: error.message || "Something went wrong. Please try again.",
       });
     } finally {
       setIsSubmitting(false);
@@ -168,9 +143,8 @@ function Contact() {
           </h2>
 
           <p className="contact-description">
-            Have an idea, project or opportunity?
-            Let's turn it into something meaningful
-            together.
+            Have an idea, project or opportunity? Let's turn it into something
+            meaningful together.
           </p>
         </div>
 
@@ -192,10 +166,8 @@ function Contact() {
             </div>
 
             <p className="contact-info-description">
-              I'm always interested in discussing
-              new projects, creative ideas and
-              opportunities to build useful digital
-              experiences.
+              I'm always interested in discussing new projects, creative ideas
+              and opportunities to build useful digital experiences.
             </p>
 
             <div className="contact-details">
@@ -209,9 +181,7 @@ function Contact() {
 
                 <span>
                   <small>EMAIL</small>
-                  <strong>
-                    hakkimappas333@gmail.com
-                  </strong>
+                  <strong>hakkimappas333@gmail.com</strong>
                 </span>
 
                 <ArrowUpRight size={16} />
@@ -224,9 +194,7 @@ function Contact() {
 
                 <span>
                   <small>LOCATION</small>
-                  <strong>
-                    Madurai, Tamil Nadu, India
-                  </strong>
+                  <strong>Madurai, Tamil Nadu, India</strong>
                 </span>
               </div>
             </div>
@@ -254,10 +222,7 @@ function Contact() {
                   <span>LinkedIn</span>
                 </a>
 
-                <a
-                  href="#projects"
-                  aria-label="Projects"
-                >
+                <a href="#projects" aria-label="Projects">
                   <FolderKanban size={18} />
                   <span>Projects</span>
                 </a>
@@ -268,14 +233,9 @@ function Contact() {
               <span></span>
 
               <div>
-                <strong>
-                  AVAILABLE FOR OPPORTUNITIES
-                </strong>
+                <strong>AVAILABLE FOR OPPORTUNITIES</strong>
 
-                <small>
-                  Open to interesting projects and
-                  developer roles.
-                </small>
+                <small>Open to interesting projects and developer roles.</small>
               </div>
             </div>
           </div>
@@ -287,19 +247,19 @@ function Contact() {
                 <h3>SEND A MESSAGE</h3>
               </div>
 
-              <div className="form-code-icon">
+              <a
+                href="tel:+919025804823"
+                className="form-code-icon"
+                aria-label="Call Hakkim"
+                title="Call Hakkim"
+              >
                 <Phone size={22} />
-              </div>
+              </a>
             </div>
 
-            <form
-              className="contact-form"
-              onSubmit={handleSubmit}
-            >
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">
-                  YOUR NAME
-                </label>
+                <label htmlFor="name">YOUR NAME</label>
 
                 <input
                   id="name"
@@ -313,9 +273,7 @@ function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">
-                  EMAIL ADDRESS
-                </label>
+                <label htmlFor="email">EMAIL ADDRESS</label>
 
                 <input
                   id="email"
@@ -329,9 +287,7 @@ function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject">
-                  SUBJECT
-                </label>
+                <label htmlFor="subject">SUBJECT</label>
 
                 <input
                   id="subject"
@@ -344,9 +300,7 @@ function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">
-                  MESSAGE
-                </label>
+                <label htmlFor="message">MESSAGE</label>
 
                 <textarea
                   id="message"
@@ -359,9 +313,7 @@ function Contact() {
               </div>
 
               {status.message && (
-                <div
-                  className={`form-status ${status.type}`}
-                >
+                <div className={`form-status ${status.type}`}>
                   <span></span>
                   {status.message}
                 </div>
@@ -372,11 +324,7 @@ function Contact() {
                 className="contact-submit"
                 disabled={isSubmitting}
               >
-                <span>
-                  {isSubmitting
-                    ? "SENDING..."
-                    : "SEND MESSAGE"}
-                </span>
+                <span>{isSubmitting ? "SENDING..." : "SEND MESSAGE"}</span>
 
                 <Send size={18} />
 
@@ -392,13 +340,9 @@ function Contact() {
           <div className="contact-bottom-content">
             <FolderKanban size={19} />
 
-            <span>
-              HAVE A PROJECT IN MIND?
-            </span>
+            <span>HAVE A PROJECT IN MIND?</span>
 
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=hakkimappas333@gmail.com"
-            >
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hakkimappas333@gmail.com">
               SAY HELLO
               <ArrowUpRight size={15} />
             </a>
