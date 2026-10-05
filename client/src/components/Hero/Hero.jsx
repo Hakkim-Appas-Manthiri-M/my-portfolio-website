@@ -198,7 +198,7 @@ function Hero() {
               <p>
                 &nbsp;&nbsp;stack:{" "}
                 <span className="code-string">
-                  "MERN"
+                  "Full Stack"
                 </span>
                 ,
               </p>

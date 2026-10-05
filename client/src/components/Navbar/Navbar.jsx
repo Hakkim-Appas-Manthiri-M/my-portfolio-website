@@ -134,7 +134,7 @@ function Navbar() {
         <div className="navbar-actions">
 
           <a
-            href="/My_Resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-button"
@@ -192,7 +192,7 @@ function Navbar() {
           ))}
 
           <a
-            href="/My_Resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="mobile-resume-button"

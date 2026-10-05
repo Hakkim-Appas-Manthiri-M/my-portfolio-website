@@ -15,12 +15,11 @@ import {
 import {
   SiBootstrap,
   SiExpress,
-  SiGit,
   SiGithub,
   SiHtml5,
   SiJavascript,
   SiMongodb,
-  SiMongoose,
+  SiSpringboot,
   SiMysql,
   SiNodedotjs,
   SiReact,
@@ -82,6 +81,16 @@ const skillCategories = [
     icon: "code",
     skills: [
       {
+        name: "Java",
+        level: 70,
+        icon: FaJava,
+      },
+      {
+        name: "Springboot",
+        level: 60,
+        icon: SiSpringboot,
+      },
+      {
         name: "Node.js",
         level: 65,
         icon: SiNodedotjs,
@@ -93,23 +102,13 @@ const skillCategories = [
       },
       {
         name: "REST APIs",
-        level: 65,
+        level: 60,
         icon: Network,
       },
       {
         name: "Authentication",
         level: 55,
         icon: ShieldCheck,
-      },
-      {
-        name: "Java",
-        level: 60,
-        icon: FaJava,
-      },
-      {
-        name: "Mongoose",
-        level: 60,
-        icon: SiMongoose,
       },
     ],
   },
@@ -124,11 +123,6 @@ const skillCategories = [
         icon: SiMongodb,
       },
       {
-        name: "MySQL",
-        level: 60,
-        icon: SiMysql,
-      },
-      {
         name: "SQL",
         level: 65,
         icon: Database,
@@ -141,13 +135,13 @@ const skillCategories = [
     icon: "tools",
     skills: [
       {
-        name: "Git",
-        level: 65,
-        icon: SiGit,
+        name: "MySQL",
+        level: 60,
+        icon: SiMysql,
       },
       {
         name: "GitHub",
-        level: 60,
+        level: 75,
         icon: SiGithub,
       },
       {

@@ -1,33 +1,60 @@
-# CODEPORT
+# HAKKIM PORTFOLIO
 
-> Build • Ship • Evolve
-
-A premium full-stack developer portfolio website built with a futuristic red and orange visual style, modern animations, responsive layouts, and a Node.js + MongoDB backend.
+A premium full-stack developer portfolio website built with React, Vite, Node.js, Express.js, and Gmail SMTP. The portfolio combines a professional developer identity with a futuristic gaming-inspired visual aesthetic, radioactive green accents, modern animations, and fully responsive layouts.
 
 ## 🚀 About
 
-CODEPORT is my personal developer portfolio website where I showcase my skills, projects, experience, and contact information.
+HAKKIM PORTFOLIO is the personal developer portfolio website of **Hakkim Appas Manthiri M**, a Full Stack Developer from Madurai.
 
-The design combines a professional developer identity with a futuristic gaming-inspired visual aesthetic.
+The website showcases my:
+
+- Developer profile
+- Education
+- Technical skills
+- Projects
+- Professional information
+- Contact details
+- Resume
+- Contact form
+
+The design combines a clean professional developer portfolio with a futuristic technology and gaming-inspired visual style.
+
+## 👨‍💻 Developer
+
+**Name:** HAKKIM APPAS MANTHIRI M  
+**Role:** Full Stack Developer  
+**Location:** Madurai, Tamil Nadu, India  
+**Education:** B.Sc. Computer Science  
+**College:** Madurai Kamaraj University College, Madurai  
+**CGPA:** 7.4 / 10  
+**Passing Year:** 2024
 
 ## ✨ Features
 
 - Modern responsive portfolio UI
-- Premium red + orange visual theme
-- Responsive navbar with mobile navigation
-- Hero section with developer profile
+- Futuristic developer-focused visual design
+- Radioactive green `#39FF14` accent theme
+- Responsive navbar
+- Custom Hakkim logo
+- Hero section
 - About section
-- Interactive Skills section
+- Education information
+- Interactive skills section
 - Project showcase
-- Contact form
-- GitHub and LinkedIn integration
 - Project live-demo links
 - Project source-code links
-- MongoDB Atlas database integration
-- Node.js / Express backend
-- Contact form API
+- Resume preview
+- Contact form
+- Email contact functionality
+- Gmail SMTP integration
+- Professional HTML email template
+- Visitor information in received emails
+- Reply-to visitor email functionality
 - Smooth animations and hover effects
-- Mobile, tablet and desktop responsive design
+- Mobile responsive navigation
+- Mobile, tablet, and desktop responsive design
+- Vercel frontend deployment
+- Backend deployment also vercel
 
 ## 🛠️ Tech Stack
 
@@ -38,6 +65,8 @@ The design combines a professional developer identity with a futuristic gaming-i
 - JavaScript
 - React.js
 - Vite
+- Bootstrap
+- Tailwind CSS
 - Lucide React
 - React Icons
 
@@ -45,15 +74,16 @@ The design combines a professional developer identity with a futuristic gaming-i
 
 - Node.js
 - Express.js
-- REST APIs
+- REST API
 - CORS
 - dotenv
+- Nodemailer
 
-### Database
+### Email
 
-- MongoDB
-- MongoDB Atlas
-- Mongoose
+- Gmail SMTP
+- Nodemailer
+- Gmail App Password authentication
 
 ### Development Tools
 
@@ -61,40 +91,41 @@ The design combines a professional developer identity with a futuristic gaming-i
 - Git
 - GitHub
 - npm
-- Vercel
-- Render
+
+### Deployment
+
+- Vercel — Frontend
+- Render — Backend
 
 ## 📂 Project Structure
 
-```text
-CODEPORT/
+HAKKIM-PORTFOLIO/
 │
 ├── client/
 │   ├── public/
+│   │   ├── h-logo.svg
+│   │   ├── h-logo.png
+│   │   ├── My_Resume.pdf
+│   │   └── ...
+│   │
 │   ├── src/
 │   │   ├── assets/
 │   │   ├── components/
 │   │   ├── sections/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
 │   │   └── ...
+│   │
 │   ├── package.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   └── ...
 │
 ├── server/
-│   ├── routes/
-│   ├── models/
-│   ├── controllers/
 │   ├── server.js
 │   ├── package.json
-│   └── ...
+│   ├── .env
+│   ├── .env.example
+│   └── .gitignore
 │
 ├── .gitignore
 └── README.md
-
-
-### Important
-
-I intentionally used:
-
-```text
-YOUR_REPOSITORY_URL
-your_mongodb_connection_string

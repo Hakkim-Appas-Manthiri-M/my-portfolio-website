@@ -14,7 +14,7 @@ import {
   SiReact,
 } from "react-icons/si";
 
-import { FaCss3Alt } from "react-icons/fa";
+import { FaCss3Alt, FaJava } from "react-icons/fa";
 
 import "./Projects.css";
 
@@ -29,7 +29,7 @@ const projects = [
       "NovaVault is a full-stack gaming marketplace built with React, Node.js and MongoDB. It features a dynamic game catalog, detailed product pages, a modern purchase flow, and a fully responsive design. The platform focuses on delivering a premium, immersive browsing experience for game enthusiasts with smooth animations and a dark-mode-first aesthetic.",
     technologies: [
       { name: "React.js", icon: SiReact },
-      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Java", icon: FaJava },
       { name: "MongoDB", icon: SiMongodb },
     ],
     featured: true,
